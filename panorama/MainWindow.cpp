@@ -1,5 +1,6 @@
-#include "MainWindow.h"
+﻿#include "MainWindow.h"
 #include "ui_MainWindow.h"
+#include "DlgCheck.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -13,3 +14,9 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_pb_check_clicked()
+{
+    DlgCheck dlg;
+    dlg.exec();
+}

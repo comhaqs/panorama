@@ -15,14 +15,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+INCLUDEPATH += 'D:/opencv/build/include'
+LIBS += -L'D:/opencv/build/x64/vc14/lib' -lopencv_world420
+
+INCLUDEPATH += 'D:/boost_1_72_0'
+LIBS += -L'D:/boost_1_72_0/lib/vs2017'
+
 SOURCES += \
+    Configure.cpp \
+    DlgCheck.cpp \
+    UtilityTool.cpp \
     main.cpp \
     MainWindow.cpp
 
 HEADERS += \
-    MainWindow.h
+    Configure.h \
+    DlgCheck.h \
+    MainWindow.h \
+    UtilityTool.h
 
 FORMS += \
+    DlgCheck.ui \
     MainWindow.ui
 
 # Default rules for deployment.
